@@ -1,0 +1,176 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#gameBoard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 800px;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.squares {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    width: 33%;
+    height: 33%;
+    font-size: 190px;
+}
+
+img:hover {
+    animation: fireworks 1s ease;
+}
+
+footer {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 200px;
+    height: 65px;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+#square-0,
+#square-1,
+#square-2,
+#square-3,
+#square-4,
+#square-5 {
+    border-bottom: 10px solid black;
+}
+
+#square-0,
+#square-1,
+#square-3,
+#square-4,
+#square-6,
+#square-7 {
+    border-right: 10px solid black;
+}
+
+#square-0,
+#square-1,
+#square-2 {
+    align-self: end;
+}
+
+#square-6,
+#square-7 {
+    align-self: start;
+}
+
+#square-3,
+#square-4,
+#square-5 {
+    height: 34%;
+}
+
+#square-1,
+#square-4,
+#square-7 {
+    width: 34%;
+}
+
+@media (height < 1050px) or (width < 1000px) {
+    #gameBoard {
+        width: 800px;
+        height: 800px;
+    }
+
+    footer {
+        width: 800px;
+    }
+
+    button {
+        width: 125px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (height < 950px) or (width < 800px) {
+    #gameBoard {
+        width: 600px;
+        height: 600px;
+    }
+
+    footer {
+        width: 600px;
+    }
+
+    button {
+        width: 125px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (height < 750px) or (width < 600px) {
+    #gameBoard {
+        width: 400px;
+        height: 400px;
+    }
+
+    footer {
+        width: 400px;
+    }
+
+    button {
+        width: 125px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (height < 550px) or (width < 400px) {
+    #gameBoard {
+        width: 300px;
+        height: 300px;
+    }
+
+    footer {
+        width: 300px;
+    }
+}
+
+@keyframes fireworks {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: translateY(-50px) scale(2);
+    }
+}
